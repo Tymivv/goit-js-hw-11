@@ -4,7 +4,6 @@ export function fetchImg(name, page) {
   return fetch(
     `https://pixabay.com/api/?key=${API_KEY}&q=${name}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${limit}&page=${page}`,
   ).then(response => {
-    console.log(response);
     if (!response.ok) {
       throw new Error(response.status);
     }
